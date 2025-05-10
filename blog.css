@@ -1,0 +1,841 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #555555; /* General text color */
+    background-color: #ffffff;
+}
+
+/* Color Palette Variables (Matching the image) */
+:root {
+    --solaris-logo-color: #383838;
+    --nav-link-color: #586065;
+    --nav-active-bg: #848d95; /* Medium grey */
+    --nav-active-text: #ffffff;
+    --btn-login-bg: #848d95; /* Same as active nav */
+    --btn-login-text: #ffffff;
+    --header-bg-top: #e8edf0; /* Light cool grey */
+    --header-bg-bottom: #dfe3e6; /* Slightly darker cool grey */
+    --post-title-color: #50c4dc; /* Light teal/cyan */
+    --sidebar-title-color: #50c4dc; /* Same light teal/cyan */
+    --icon-orange-color: #ef6c2f; /* Orange-red for icons, read more, active tab */
+    --floating-icon-bg: #4fb0c0; /* Teal for floating left icon */
+    --text-muted-color: #6c757d;
+    --post-category-color: #777777;
+}
+
+/* Header Styling */
+.site-header {
+    background: linear-gradient(to bottom, var(--header-bg-top), var(--header-bg-bottom));
+    border-bottom: 1px solid #c8cfd4;
+    padding-top: 8px; /* Adjusted padding */
+    padding-bottom: 8px; /* Adjusted padding */
+}
+
+.navbar-brand {
+    font-size: 2.2rem; /* Slightly larger */
+    font-weight: 700; /* Bold */
+    color: var(--solaris-logo-color) !important;
+    letter-spacing: 1.5px; /* Increased letter spacing */
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link {
+    color: var(--nav-link-color);
+    margin: 0 8px; /* Adjusted margin */
+    padding: 6px 12px !important; /* Adjusted padding */
+    font-weight: 500; /* Medium weight */
+    text-transform: uppercase;
+    font-size: 0.85rem; /* Slightly smaller */
+    transition: color 0.3s ease;
+    border-radius: 4px; /* For hover effect consistency */
+}
+
+.navbar-nav .nav-link:hover:not(.active) {
+    color: #007bff; /* Standard Bootstrap blue or custom */
+    background-color: rgba(0,0,0,0.03);
+}
+
+.navbar-nav .nav-link.active {
+    background-color: var(--nav-active-bg);
+    color: var(--nav-active-text) !important;
+}
+
+.btn-login {
+    background-color: var(--btn-login-bg);
+    color: var(--btn-login-text) !important;
+    padding: 6px 18px; /* Adjusted padding */
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem; /* Same as nav links */
+    border: 1px solid #7a838b; /* Subtle border */
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #707880; /* Darker shade */
+}
+
+.nav-cart-icon i.fa-shopping-cart {
+    font-size: 1.2rem;
+    color: var(--nav-link-color);
+}
+.nav-cart-icon:hover i.fa-shopping-cart {
+    color: #007bff; /* Standard Bootstrap blue or custom */
+}
+
+/* Main Content Styling */
+.post-image {
+    border-radius: 5px;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.post-image:hover {
+    transform: scale(1.015);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.post-categories {
+    font-size: 0.85rem;
+    color: var(--post-category-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.post-title {
+    font-size: 2.7rem;
+    font-weight: 700; /* Bold */
+    color: var(--post-title-color);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+    transition: color 0.3s ease;
+}
+.post-title:hover {
+    color: #42aacc; /* Slightly darker teal on hover */
+}
+
+.post-meta {
+    color: var(--text-muted-color);
+    font-size: 0.85rem; /* Slightly smaller */
+}
+.post-meta strong {
+    color: #444; /* Darker for emphasis */
+}
+.post-meta-author {
+    color: var(--text-muted-color);
+    text-decoration: none;
+}
+.post-meta-author:hover strong {
+    color: var(--icon-orange-color);
+}
+.post-meta-icon {
+    margin-right: 5px;
+    color: var(--icon-orange-color);
+}
+
+.post-excerpt {
+    font-size: 1rem;
+    line-height: 1.7; /* Increased line height */
+    color: #555555;
+}
+
+.read-more-link {
+    display: inline-block;
+    color: var(--icon-orange-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+.read-more-link i {
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
+.read-more-link:hover {
+    color: #d8570a; /* Darker orange */
+}
+.read-more-link:hover i {
+    transform: translateX(4px);
+}
+
+/* Sidebar Styling */
+.sidebar .widget {
+    margin-bottom: 2.2rem; /* Increased margin */
+}
+
+.sidebar .widget-title {
+    font-size: 1.1rem;
+    font-weight: 700; /* Bold */
+    color: var(--sidebar-title-color);
+    text-transform: uppercase;
+    margin-bottom: 1.2rem; /* Increased margin */
+}
+
+.sidebar-divider {
+    border-top: 1px dashed #cccccc;
+    margin-top: 2rem; /* Increased margin */
+    margin-bottom: 2rem; /* Increased margin */
+}
+
+/* Search Widget */
+.search-widget .search-input {
+    border-radius: 0;
+    border-right: none;
+    border-color: #ced4da;
+    font-size: 0.9rem;
+}
+.search-widget .search-input:focus {
+    box-shadow: none;
+    border-color: var(--sidebar-title-color);
+}
+.search-widget .btn-search {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-left: none;
+    color: #6c757d;
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+}
+.search-widget .btn-search:hover {
+    background-color: #e2e6ea;
+}
+
+/* Categories Widget */
+.categories-widget ul li {
+    margin-bottom: 0.6rem; /* Increased margin */
+}
+.categories-widget ul li a {
+    color: #555555;
+    text-decoration: none;
+    font-size: 0.95rem; /* Slightly larger */
+    transition: color 0.3s ease;
+}
+.categories-widget ul li a:hover {
+    color: var(--icon-orange-color);
+}
+.categories-widget ul li::before {
+    content: "●";
+    color: var(--icon-orange-color);
+    margin-right: 10px;
+    font-size: 0.6em; /* Smaller bullet */
+    vertical-align: middle;
+}
+
+/* Recent Posts Widget */
+.recent-post-thumb {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 3px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.recent-post-thumb:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+.recent-post-title {
+    font-weight: 600;
+    color: #333333;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+.recent-post-title:hover {
+    color: var(--sidebar-title-color);
+}
+.recent-post-meta {
+    font-size: 0.8rem;
+}
+
+/* Popular Tabs Widget */
+.popular-tabs .nav-link {
+    color: #555555;
+    background-color: #f0f0f0; /* Lighter grey for inactive tabs */
+    border: 1px solid #dddddd;
+    border-bottom: none;
+    margin-right: 2px;
+    padding: 0.6rem 1.1rem; /* Adjusted padding */
+    font-size: 0.85rem; /* Smaller font */
+    font-weight: 500;
+    text-transform: capitalize; /* Match image "Views", "Comments", "Likes" */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.popular-tabs .nav-link.active {
+    color: var(--nav-active-text);
+    background-color: var(--icon-orange-color);
+    border-color: var(--icon-orange-color);
+    font-weight: 600;
+}
+.popular-tabs .nav-link:hover:not(.active) {
+    background-color: #e6e6e6;
+    border-color: #cccccc;
+}
+.tab-content {
+    border: 1px solid #dddddd;
+    padding: 1.2rem; /* Increased padding */
+    border-top: none;
+    background-color: #fdfdfd; /* Very light background for tab content */
+}
+.tab-content p {
+    font-size: 0.9rem;
+}
+
+/* Floating Left Icon */
+.floating-left-icon {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--floating-icon-bg);
+    color: white;
+    padding: 10px 12px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    z-index: 998; /* Below scroll to top if they overlap */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.floating-left-icon:hover {
+    background-color: #3f93a1; /* Darker teal */
+    transform: translateY(-50%) translateX(2px);
+}
+.floating-left-icon i {
+    font-size: 1.1rem;
+}
+
+/* Scroll to Top Button */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 25px; /* Increased distance */
+    right: 25px; /* Increased distance */
+    z-index: 999;
+    border: none;
+    outline: none;
+    background-color: var(--icon-orange-color);
+    color: white;
+    cursor: pointer;
+    padding: 10px 13px; /* Adjusted padding for roundness */
+    border-radius: 50%;
+    font-size: 1.1rem; /* Adjusted icon size */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25); /* Stronger shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #d8570a; /* Darker orange */
+    transform: scale(1.1) translateY(-2px); /* Add slight upward movement */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) { /* Medium devices (tablets, less than 992px) */
+    .navbar-nav {
+        text-align: center; /* Center nav links when collapsed */
+    }
+    .navbar-nav .nav-link {
+        margin: 5px 0; /* Adjust margin for stacked links */
+    }
+    .navbar-nav.ms-auto { /* Align cart and login button properly on mobile */
+        margin-top: 10px;
+        padding-left: 15px; /* Add some padding if needed */
+    }
+    .post-title {
+        font-size: 2.2rem;
+    }
+    .sidebar {
+        margin-top: 2.5rem;
+    }
+}
+
+@media (max-width: 767.98px) { /* Small devices (landscape phones, less than 768px) */
+    .post-title {
+        font-size: 1.9rem;
+    }
+    .navbar-brand {
+        font-size: 1.8rem;
+    }
+    .floating-left-icon {
+        display: none; /* Optionally hide on very small screens */
+    }
+}
+/* section2 */
+/* Add these new styles or modify existing ones in your style.css file */
+
+/* ... (Keep all styles from the previous response for header, post, common sidebar elements, floating icons etc.) ... */
+
+
+/* Tags Widget Styling */
+.tags-widget .widget-title {
+    /* Uses existing .widget-title style */
+}
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Space between tags */
+}
+
+.tag-link {
+    display: inline-block;
+    padding: 5px 12px;
+    font-size: 0.8rem; /* Small font for tags */
+    color: #666666; /* Dark grey text */
+    background-color: #f0f0f0; /* Light grey background */
+    border: 1px solid #dddddd; /* Light border */
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.tag-link:hover {
+    background-color: var(--icon-orange-color); /* Orange-red on hover from palette */
+    color: #ffffff;
+    border-color: var(--icon-orange-color);
+}
+
+/* Calendar Widget Styling */
+.calendar-widget .widget-title {
+    /* Uses existing .widget-title style */
+}
+
+.calendar-container {
+    border: 1px solid #eeeeee; /* Light border around calendar */
+    padding: 10px;
+    background-color: #fdfdfd; /* Very light background */
+}
+
+.calendar-header {
+    margin-bottom: 10px;
+}
+
+.calendar-month-year {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--sidebar-title-color); /* Teal color for month/year */
+    text-transform: uppercase;
+}
+
+.calendar-nav {
+    color: #aaaaaa; /* Light grey for nav arrows */
+    padding: 0.2rem 0.4rem;
+    border: none;
+}
+.calendar-nav:hover {
+    color: var(--sidebar-title-color); /* Teal on hover */
+    background-color: transparent;
+}
+.calendar-nav:focus {
+    box-shadow: none;
+}
+
+
+.calendar-table {
+    margin-bottom: 0; /* Remove default table margin */
+    font-size: 0.85rem;
+}
+
+.calendar-table th {
+    font-weight: 500;
+    color: #777777; /* Grey for day names */
+    padding: 0.5rem 0.2rem; /* Adjust padding for day headers */
+    border-bottom: 1px solid #eeeeee;
+}
+
+.calendar-table td {
+    padding: 0.5rem 0.2rem; /* Adjust padding for dates */
+    color: #555555;
+    border: none; /* Remove cell borders */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.calendar-table td:hover:not(.current-day) {
+    background-color: #f0f0f0; /* Light grey hover for dates */
+    border-radius: 3px;
+}
+
+.calendar-table td.current-day {
+    background-color: var(--icon-orange-color); /* Orange-red for current day */
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+/* Ensure recent post widget titles are hidden if not needed, as per new image */
+.recent-posts-widget > .widget-title {
+    /* display: none; */ /* Uncomment this if you want to hide "RECENT POSTS" title explicitly for this version */
+}
+/* section3 */
+/* Add these new styles or modify existing ones in your style.css file */
+
+/* ... (Keep all styles from the previous responses for header, post, common sidebar elements, floating icons etc.) ... */
+
+/* Audio Player Visual Styling */
+.audio-player-container {
+    position: relative;
+    width: 100%;
+    height: 150px; /* Adjust height as needed */
+    background-image: url('https://via.placeholder.com/800x150.png?text=Ocean+Waves+Background'); /* Replace with your actual image */
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.audio-player-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.audio-info .audio-title-text {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    color: #ffffff; /* Ensure title is white */
+}
+
+.audio-info .audio-artist-text {
+    font-size: 0.9rem;
+    color: #cccccc; /* Lighter grey for artist */
+}
+
+.audio-controls-visual {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.audio-icon-visual {
+    font-size: 1.2rem;
+    color: var(--post-title-color); /* Teal color for icons */
+    margin: 0 10px;
+    cursor: pointer;
+}
+/* section4 */
+/* Add these new styles or modify existing ones in your style.css file */
+
+/* ... (Keep all styles from the previous responses for header, post, common sidebar elements, floating icons etc.) ... */
+
+
+/* Post Divider (if not already styled adequately by sidebar-divider) */
+.post-divider {
+    border-top: 1px dashed #cccccc;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+
+/* RSS Feed Widget Styling */
+.rss-feed-widget .widget-title {
+    /* Uses existing .widget-title style (teal color) */
+    /* but we want to style the icon specifically */
+}
+
+.rss-title { /* Specific class for RSS title to manage icon color */
+    color: var(--sidebar-title-color); /* Teal */
+    display: flex;
+    align-items: center;
+}
+
+.rss-icon-orange {
+    color: var(--icon-orange-color); /* Orange for the RSS icon */
+    font-size: 1.1em; /* Slightly larger than text */
+    margin-right: 8px;
+}
+
+.rss-feed-list {
+    padding-left: 0; /* Remove default ul padding */
+}
+
+.rss-feed-item {
+    margin-bottom: 1.5rem;
+    padding-left: 20px; /* Space for the bullet */
+    position: relative;
+}
+
+.rss-feed-item::before {
+    content: "●";
+    position: absolute;
+    left: 0;
+    top: 5px; /* Adjust vertical alignment */
+    color: var(--icon-orange-color); /* Orange bullet */
+    font-size: 0.7em;
+}
+
+.rss-item-title {
+    display: block;
+    font-weight: 600;
+    color: var(--sidebar-title-color); /* Teal for feed item titles */
+    text-decoration: none;
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+.rss-item-title:hover {
+    color: #42aacc; /* Darker teal on hover */
+}
+
+.rss-item-date {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted-color); /* Grey for date */
+    margin-bottom: 0.4rem;
+}
+
+.rss-item-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555555; /* Standard text color for description */
+    margin-bottom: 0;
+}
+
+/* Ensure specific styles for these new widgets if they were removed and re-added,
+   or if their appearance needs to differ from previous widgets.
+   For example, if .flickr-widget, .follow-us-widget, .archives-widget styles were removed,
+   and they are re-introduced with different content, make sure their styles are still available or updated.
+   In this case, they are replaced by RSS Feed.
+*/
+
+/* Clearing out old sidebar widget styles if they are no longer used and were very specific,
+   though general .widget and .widget-title should be fine.
+   The new request only shows RSS Feed, so previous specific widget styles like
+   .flickr-placeholder, .social-icons, .archives-list might not be needed if those widgets are gone.
+*/
+
+/* Example: Style for placeholder Flickr photos if this widget were still present */
+.flickr-widget .widget-title {
+    /* Uses existing .widget-title style */
+}
+.flickr-placeholder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Small gap between photos */
+}
+.flickr-placeholder img {
+    width: 70px; /* As per example HTML */
+    height: 70px;
+    object-fit: cover;
+    border-radius: 3px;
+    border: 1px solid #eeeeee;
+    transition: opacity 0.3s ease;
+}
+.flickr-placeholder img:hover {
+    opacity: 0.8;
+}
+
+/* Example: Style for social icons if "Follow Us" widget were still present */
+.follow-us-widget .widget-text {
+    font-size: 0.9rem;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+/* Specific colors for social icons (add more as needed) */
+.social-icon.twitter       { background-color: #1DA1F2; }
+.social-icon.dribbble      { background-color: #EA4C89; }
+.social-icon.pinterest     { background-color: #BD081C; }
+.social-icon.facebook      { background-color: #1877F2; }
+.social-icon.vimeo         { background-color: #1AB7EA; }
+.social-icon.google-plus   { background-color: #DB4437; }
+.social-icon.flickr        { background-color: #0063DC; } /* Flickr's blue or pink #FF0084 */
+
+/* Example: Style for Archives widget if it were still present */
+.archives-widget .widget-title {
+    /* Uses existing .widget-title style */
+}
+.archives-list li {
+    margin-bottom: 0.6rem;
+}
+.archives-list li a {
+    color: #555555;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+.archives-list li a:hover {
+    color: var(--icon-orange-color);
+}
+.archives-list li a::before { /* Using existing category bullet style */
+    content: "●";
+    color: var(--icon-orange-color);
+    margin-right: 10px;
+    font-size: 0.6em;
+    vertical-align: middle;
+}
+.archive-count {
+    color: var(--text-muted-color);
+    font-size: 0.85rem;
+}
+/* section5 */
+/* Add these new styles or modify existing ones in your style.css file */
+
+/* ... (Keep all styles from the previous responses for header, post, common sidebar elements, floating icons etc.) ... */
+
+/* General Post Divider (if not styled before or if this one is different) */
+.post-divider {
+    border-top: 1px dashed #cccccc; /* Color matches other dividers */
+    margin-top: 2.5rem; /* Adjust as needed */
+    margin-bottom: 2.5rem; /* Adjust as needed */
+}
+/* For the one specifically below the quote post */
+.mt-5 {
+    margin-top: 3rem !important; /* Example: if more space is needed */
+}
+
+
+/* Quote Post Specific Styling */
+.quote-post-article .post-title.quote-page-title {
+    text-align: center; /* Center "QUOTE POST" title */
+    margin-bottom: 1rem; /* Space below the title */
+    font-size: 2.8rem; /* Matches other post titles */
+    color: var(--post-title-color); /* Teal color */
+    font-weight: 700;
+}
+
+.quote-block-wrapper {
+    position: relative; /* For positioning the icon bubble */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; /* Or a specific max-width if needed */
+}
+
+.quote-icon-bubble {
+    position: absolute;
+    top: -30px; /* Pulls the bubble up, adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff; /* White bubble background */
+    width: 70px; /* Bubble size */
+    height: 70px; /* Bubble size */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 3; /* Ensure it's above the image and overlay */
+}
+
+.quote-icon-bubble i.fa-quote-left {
+    font-size: 1.8rem; /* Size of the quote mark */
+    color: var(--icon-orange-color); /* Orange-red quote mark */
+}
+
+.quote-image-container {
+    position: relative;
+    width: 100%;
+    min-height: 350px; /* Adjust height as needed */
+    background-image: url('https://via.placeholder.com/800x400.png?text=Man+on+Bike+Background'); /* Replace with your actual image */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px; /* Slightly rounded corners for the image block */
+    overflow: hidden; /* Ensures overlay and content stay within rounded corners */
+    display: flex; /* To center content if needed, but padding on overlay works too */
+    align-items: center;
+    justify-content: center;
+}
+
+.quote-image-container::before { /* Reddish-brown overlay on the image */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(80, 40, 30, 0.75); /* Adjust color (e.g., reddish-brown) and opacity */
+    border-radius: 8px; /* Match parent's border-radius */
+    z-index: 1;
+}
+
+.quote-content-overlay {
+    position: relative; /* To be above the ::before overlay */
+    z-index: 2;
+    padding: 60px 40px 40px; /* Top padding to account for icon bubble space, LR and Bottom padding */
+    text-align: center;
+    color: #ffffff; /* White text for quote and author */
+}
+
+.quote-text {
+    font-size: 1.7rem; /* Size of the quote text */
+    font-weight: 300; /* Light font weight */
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    font-style: normal; /* Or italic if preferred */
+}
+
+.quote-author {
+    display: block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--icon-orange-color); /* Orange-red for author name */
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Ensure the sidebar structure doesn't collapse if empty */
+.sidebar {
+    min-height: 100px; /* Or some other value to keep space if it's meant to be there */
+}
+
+/* Responsive adjustments for quote text if needed */
+@media (max-width: 767.98px) {
+    .quote-post-article .post-title.quote-page-title {
+        font-size: 2.2rem;
+    }
+    .quote-icon-bubble {
+        width: 60px;
+        height: 60px;
+        top: -25px;
+    }
+    .quote-icon-bubble i.fa-quote-left {
+        font-size: 1.5rem;
+    }
+    .quote-image-container {
+        min-height: 300px;
+    }
+    .quote-content-overlay {
+        padding: 50px 20px 30px;
+    }
+    .quote-text {
+        font-size: 1.4rem;
+    }
+    .quote-author {
+        font-size: 0.85rem;
+    }
+}

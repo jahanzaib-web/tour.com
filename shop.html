@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solaris Theme - Shop Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+
+    <!-- Header Section (Same as before) -->
+    <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">SOLARIS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus .html">FEATURES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">GALLERY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">BLOG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="shop.html">SHOP</a> <!-- SHOP is active -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">CONTACT</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto d-flex flex-row align-items-center">
+                        <li class="nav-item me-3">
+                            <a class="nav-link nav-cart-icon" href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-login" href="#">LOG IN</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Section for Shop -->
+    <main class="container mt-4 mb-5">
+        <!-- Breadcrumbs -->
+        
+        <hr class="page-divider">
+
+        <!-- Shop Title -->
+        <div class="shop-title-container text-center my-4" data-aos="fade-up">
+            <div class="rainbow-arc"></div>
+            <h1 class="shop-page-title">SHOP</h1>
+        </div>
+
+        <!-- Sorting Dropdown -->
+        <div class="row mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-md-4 ms-md-auto"> <!-- Pushes dropdown to the right on medium screens and up -->
+                <select class="form-select sorting-dropdown" aria-label="Default sorting">
+                    <option selected>Default sorting</option>
+                    <option value="1">Sort by popularity</option>
+                    <option value="2">Sort by average rating</option>
+                    <option value="3">Sort by latest</option>
+                    <option value="4">Sort by price: low to high</option>
+                    <option value="5">Sort by price: high to low</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="row g-4">
+            <!-- Product Card 1 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="product-card">
+                    <img src="resort.jpg" class="card-img-top product-image" alt="Amsterdam Crazy Weekend">
+                    <div class="card-body product-card-body">
+                        <h5 class="product-title">Amsterdam Crazy Weekend</h5>
+                        <p class="product-location">AMSTERDAM, THE NETHERLANDS</p>
+                        <p class="product-price">
+                            from <span class="price-amount">$125.69</span> /night
+                        </p>
+                    </div>
+                </div>
+                <hr class="product-card-divider">
+            </div>
+
+            <!-- Product Card 2 (SALE) -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="product-card">
+                    <div class="sale-badge">SALE!</div>
+                    <img src="lodge.jpg" class="card-img-top product-image" alt="Bernardus Lodge">
+                    <div class="card-body product-card-body">
+                        <h5 class="product-title">Bernardus Lodge</h5>
+                        <p class="product-location">CARMEL VALLEY, CALIFORNIA</p>
+                        <p class="product-price">
+                            from <del class="original-price">$195.00</del> <span class="price-amount sale-price">$180.00</span> /night
+                        </p>
+                    </div>
+                </div>
+                <hr class="product-card-divider">
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="product-card">
+                    <img src="resort.jpg" class="card-img-top product-image" alt="Capella Marigot Bay">
+                    <div class="card-body product-card-body">
+                        <h5 class="product-title">Capella Marigot Bay Resort & Marina</h5>
+                        <p class="product-location">MARIGOT BAY, ST.LUCIA</p>
+                        <p class="product-price">
+                            from <span class="price-amount">$374.19</span> /night
+                        </p>
+                    </div>
+                </div>
+                <hr class="product-card-divider">
+            </div>
+
+            <!-- Add more product cards as needed -->
+            <!-- Example:
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/400x280.png?text=Another+Product" class="card-img-top product-image" alt="Another Product">
+                    <div class="card-body product-card-body">
+                        <h5 class="product-title">Another Awesome Trip</h5>
+                        <p class="product-location">SOMEWHERE, ELSE</p>
+                        <p class="product-price">
+                            from <span class="price-amount">$250.00</span> /night
+                        </p>
+                    </div>
+                </div>
+                <hr class="product-card-divider">
+            </div>
+            -->
+
+        </div> <!-- End of Product Grid Row -->
+
+    </main>
+
+    <!-- Floating Left Icon (Same as before) -->
+    <div class="floating-left-icon" data-aos="fade-right">
+        <i class="fas fa-th"></i>
+    </div>
+
+    <!-- Scroll to Top Button (Same as before) -->
+    <button id="scrollToTopBtn" title="Go to top" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- section2 -->
+     <!-- Main Content Section for Product Row -->
+    <main class="container mt-4 mb-5">
+
+        <!-- Dashed line above the product row -->
+        <hr class="page-divider my-4">
+
+        <!-- Product Grid Row -->
+        <div class="row g-4">
+            <!-- Product Card 1 (SALE) -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="product-card">
+                    <div class="sale-badge">SALE!</div>
+                    <img src="Depositphotos_1178293_original-564x370.jpg" class="card-img-top product-image" alt="Exotica Resort & Spa">
+                    <div class="card-body product-card-body">
+                        <h5 class="product-title">Exotica Resort & Spa</h5>
+                        <p class="product-location">MALE, MALDIVES</p>
+                        <p class="product-price">
+                            from <del class="original-price">$400.00</del> <span class="price-amount sale-price">$350.00</span> /night
+                        </p>
+                    </div>
+                </div>
+                <hr class="product-card-divider">
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="product-card">
+                    <img src="White-Coral-Beach-Sand-And-Azu-564x370.jpg" class="card-img-top product-image" alt="Exploring Tokyo & Hakone">
+                    <div class="card-body product-card-body">
+                        <h5 class="product-title">Exploring Tokyo & Hakone</h5>
+                        <p class="product-location">TOKYO, JAPAN</p>
+                        <p class="product-price">
+                            from <span class="price-amount">$132.00</span> /night
+                        </p>
+                    </div>
+                </div>
+                <hr class="product-card-divider">
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="product-card">
+                    <img src="Depositphotos_18346029_original-564x370.jpg" class="card-img-top product-image" alt="Langham Place, Fifth Avenue">
+                    <div class="card-body product-card-body">
+                        <h5 class="product-title">Langham Place, Fifth Avenue</h5>
+                        <p class="product-location">NEW YORK CITY, THE USA</p>
+                        <p class="product-price">
+                            from <span class="price-amount">$56.69</span> /night
+                        </p>
+                    </div>
+                </div>
+                <hr class="product-card-divider">
+            </div>
+        </div> <!-- End of Product Grid Row -->
+
+        <!-- Optional: Dashed line below the product row if needed -->
+        <!-- <hr class="page-divider my-4"> -->
+
+    </main>
+    <!-- section3 -->
+     
+    <!-- Main Content Section for Product Row -->
+    <main class="container mt-4 mb-5">
+
+        <!-- Dashed line above the product row -->
+        <hr class="page-divider my-4">
+
+        <!-- Product Grid Row -->
+        <div class="row g-4">
+            <!-- Product Card 1 (SALE) -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="product-card">
+                    <div class="sale-badge">SALE!</div>
+                    <img src="Depositphotos_18346029_original-564x370.jpg" class="card-img-top product-image" alt="Exotica Resort & Spa">
+                    <div class="card-body product-card-body">
+                        <h5 class="product-title">The Chesterfield Palm Beach</h5>
+                        <p class="product-location">Palm Beach, Florida</p>
+                        <p class="product-price">
+                            from <del class="original-price">$400.00</del> <span class="price-amount sale-price">$350.00</span> /night
+                        </p>
+                    </div>
+                </div>
+                <hr class="product-card-divider">
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="product-card">
+                    <img src="new_img_3-564x370.jpg" class="card-img-top product-image" alt="Exploring Tokyo & Hakone">
+                    <div class="card-body product-card-body">
+                        <h5 class="product-title">The Roger New York</h5>
+                        <p class="product-location">New York City, the USA</p>
+                        <p class="product-price">
+                            from <span class="price-amount">$132.00</span> /night
+                        </p>
+                    </div>
+                </div>
+                <hr class="product-card-divider">
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="product-card">
+                    <img src="bigstock-sunrise-on-Caribbean-beach-41952856-564x370.jpg" class="card-img-top product-image" alt="Langham Place, Fifth Avenue">
+                    <div class="card-body product-card-body">
+                        <h5 class="product-title">Trasures Of Baltic Sea</h5>
+                        <p class="product-location">Sweden, Denmark, Estonia</p>
+                        <p class="product-price">
+                            from <span class="price-amount">$56.69</span> /night
+                        </p>
+                    </div>
+                </div>
+                <hr class="product-card-divider">
+            </div>
+        </div> <!-- End of Product Grid Row -->
+
+        <!-- Optional: Dashed line below the product row if needed -->
+        <!-- <hr class="page-divider my-4"> -->
+
+    </main>
+
+
+    <!-- Floating Left Icon -->
+    <div class="floating-left-icon" data-aos="fade-right">
+        <i class="fas fa-th"></i>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" title="Go to top" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS Bundle (Popper.js included) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS (Same as before) -->
+    <script src="shop.js"></script>
+</body>
+</html>

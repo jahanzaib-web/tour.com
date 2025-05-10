@@ -1,0 +1,833 @@
+/* --- General Styles --- */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Example font */
+    background-color: #f8f9fa; /* Fallback background */
+}
+
+/* --- Hero Section Styling --- */
+.hero-section {
+    height: 100vh; /* Full viewport height */
+    /* Precise gradient overlay matching the image */
+    background:
+    linear-gradient(to bottom, rgba(220, 210, 150, 0.25) 0%, rgba(100, 150, 180, 0.45) 40%, rgba(150, 80, 100, 0.6) 100%),
+    url('https://i.stack.imgur.com/w2L3y.png') no-repeat center center; /* Your background image URL */
+    background-image: url(slider_2.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center; /* Vertically center content */
+    color: #fff; /* Default text color */
+    position: relative;
+    overflow: hidden; /* Prevent AOS animations from showing scrollbars */
+}
+
+/* --- Navbar Styling --- */
+.solaris-navbar {
+    background-color: rgba(201, 211, 61, 0.05); /* Very subtle background */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle bottom border */
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 300; /* Lighter font weight like the image */
+    color: #fff !important;
+    letter-spacing: 2px; /* Increased spacing */
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    padding: 0.4rem 0.8rem;
+    border: 2px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    font-size: 0.85rem; /* Slightly smaller font */
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #fff !important;
+    border-color: #fff; /* Solid border on hover/active */
+}
+
+.nav-actions .cart-icon {
+    font-size: 1.1rem;
+    margin-right: 1rem;
+    padding: 0.5rem 0.8rem;
+    color: rgba(255, 255, 255, 0.9);
+    border: 2px solid transparent;
+    transition: color 0.3s ease;
+}
+.nav-actions .cart-icon:hover {
+    color: #fff;
+}
+
+.nav-actions .btn-login {
+    border-color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.9);
+    border-width: 2px;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+.nav-actions .btn-login:hover {
+    border-color: #fff;
+    color: #333; /* Dark text on hover */
+    background-color: #fff;
+}
+
+/* --- Quote Styling --- */
+.hero-quote-wrapper {
+    padding-right: 2rem; /* Add some space to the right of the quote */
+}
+.hero-quote {
+    font-size: 1.15rem; /* Slightly larger */
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-weight: 300; /* Lighter weight */
+    opacity: 0.95;
+    letter-spacing: 0.5px;
+}
+.hero-quote-author {
+    font-size: 0.9rem;
+    font-style: normal;
+    opacity: 0.85;
+    letter-spacing: 1.5px; /* More spacing */
+    text-transform: uppercase;
+}
+
+/* --- Form Container Styling --- */
+.form-container-wrapper {
+    display: flex;
+    justify-content: center; /* Center the form container */
+}
+
+.form-container {
+    /* Semi-transparent dark background with radial effect */
+    background: radial-gradient(ellipse at center, rgba(60, 60, 70, 0.75) 0%, rgba(60, 60, 70, 0.6) 70%, rgba(60, 60, 70, 0.5) 100%);
+    padding: 3rem;
+    border-radius: 50%; /* Make it circular */
+    max-width: 580px; /* Adjust size as needed */
+    width: 580px; /* Fixed width */
+    height: 580px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically inside circle */
+    align-items: center; /* Center content horizontally inside circle */
+    backdrop-filter: blur(4px); /* Optional: Add a blur effect */
+    -webkit-backdrop-filter: blur(4px); /* Safari */
+    box-shadow: 0 0 30px rgba(0,0,0,0.2); /* Subtle shadow */
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 2.5rem; /* More space below heading */
+    font-weight: 300; /* Light weight */
+    letter-spacing: 1.5px; /* More spacing */
+    font-size: 1.8rem; /* Adjust size */
+    text-transform: uppercase;
+}
+
+.form-container form {
+    width: 80%; /* Limit form width inside the circle */
+    max-width: 400px;
+}
+
+/* --- Form Elements Styling --- */
+.custom-input,
+.custom-input:focus {
+    background-color: transparent; /* Fully transparent background */
+    border: none; /* Remove default border */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6); /* Underline effect */
+    color: #fff;
+    padding: 0.75rem 0.1rem; /* Adjust padding */
+    margin-bottom: 0rem; /* Handled by parent margin */
+    border-radius: 0; /* No rounded corners */
+    box-shadow: none; /* Remove focus shadow */
+    transition: border-color 0.3s ease;
+    font-size: 0.95rem;
+}
+.custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+.custom-input:focus {
+    border-bottom-color: #fff; /* White underline on focus */
+}
+
+.form-select.custom-input {
+    /* Style dropdown arrow */
+     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffffcc' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e"); /* White arrow, slightly transparent */
+     background-repeat: no-repeat;
+     background-position: right 0.75rem center;
+     background-size: 16px 12px;
+     appearance: none; /* Remove default arrow */
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     padding-right: 2.5rem; /* Space for the arrow */
+}
+
+/* Date input specific adjustments */
+.input-group .date-input {
+    border-bottom-right-radius: 0;
+    border-right: none; /* Remove right border if needed */
+}
+
+.custom-input-icon {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.1rem;
+    transition: border-color 0.3s ease;
+}
+.input-group:focus-within .custom-input-icon {
+     border-bottom-color: #fff; /* Match focus style */
+}
+.input-group:focus-within .custom-input-icon i {
+     color: #fff;
+}
+
+
+.btn-submit-custom {
+    background-color: #f37a36; /* Orange color */
+    border-color: #f37a36;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500; /* Slightly bolder */
+    letter-spacing: 1.2px;
+    width: 100%; /* Make button full width */
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    border-radius: 4px; /* Slight rounding */
+    margin-top: 1rem; /* Add space above button */
+}
+.btn-submit-custom:hover {
+    background-color: #e06825; /* Darker orange */
+    border-color: #e06825;
+    color: #fff;
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1199.98px) { /* Below XL screens */
+    .form-container {
+        max-width: 500px;
+        width: 500px;
+        height: 500px;
+        padding: 2.5rem;
+    }
+    .form-container h2 {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+    .form-container form {
+        width: 85%;
+    }
+}
+
+@media (max-width: 991.98px) { /* Below large screens (tablets) */
+     .hero-section {
+         height: auto; /* Allow height to adjust */
+         min-height: 100vh;
+         padding-top: 100px; /* Adjust padding below fixed navbar */
+         padding-bottom: 60px;
+         text-align: center; /* Center quote text */
+     }
+     .hero-quote-wrapper {
+         margin-bottom: 4rem; /* More space between quote and form */
+         padding-right: 0; /* Remove padding */
+     }
+     .form-container-wrapper {
+         justify-content: center; /* Ensure form is centered */
+     }
+     .form-container { /* Make circle responsive */
+        max-width: 90vw; /* Use viewport width */
+        width: min(500px, 90vw); /* Limit max size */
+        height: min(500px, 90vw); /* Keep it circular */
+        padding: 2rem;
+     }
+      .form-container h2 {
+          font-size: 1.5rem;
+      }
+       .form-container form {
+          width: 90%;
+       }
+
+     .navbar-nav {
+         align-items: center;
+         padding-top: 1rem;
+     }
+     .nav-actions {
+         justify-content: center;
+         margin-top: 1rem;
+         width: 100%;
+     }
+      .nav-actions .cart-icon {
+          margin-right: 1.5rem; /* More space before login */
+      }
+}
+
+ @media (max-width: 767.98px) { /* Below medium screens (phones) */
+    .form-container {
+        padding: 1.5rem;
+        width: min(400px, 85vw);
+        height: min(400px, 85vw);
+    }
+    .form-container h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+     .hero-quote {
+        font-size: 1.05rem;
+     }
+     .hero-quote-wrapper {
+         margin-bottom: 3rem;
+     }
+     /* Stack date inputs */
+     .row > .col-md-6:not(:last-child) {
+        margin-bottom: 1rem; /* Add space when dates stack */
+     }
+     /* Adjust form element spacing */
+     .form-container form .mb-4 {
+         margin-bottom: 1.5rem !important;
+     }
+     .btn-submit-custom {
+         padding: 0.7rem 1.2rem;
+         font-size: 0.9rem;
+     }
+ }
+
+  @media (max-width: 575.98px) { /* Below small screens */
+       .navbar-brand {
+           font-size: 1.6rem;
+       }
+       .navbar-nav .nav-link, .nav-actions .btn-login {
+           font-size: 0.8rem;
+       }
+       .form-container {
+          width: min(320px, 80vw);
+          height: min(320px, 80vw);
+       }
+       .form-container h2 {
+            font-size: 1.2rem;
+       }
+       .form-container form {
+            width: 95%; /* Use almost full width inside small circle */
+       }
+  }
+  /* section2 */
+  /* --- Features Section Styling --- */
+.features-section {
+    background-color: #f8f9fa; /* Light grey background like the image */
+    overflow-x: hidden; /* Prevent horizontal scrollbar from AOS */
+}
+
+/* Custom padding for larger screens if needed */
+.py-md-6 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+@media (max-width: 767.98px) {
+    .py-md-6 {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+
+.feature-icon {
+    max-width: 140px; /* Adjust size as needed */
+    height: auto;
+    /* The circular background should be part of your icon image */
+}
+
+.feature-title {
+    color: #343a40; /* Dark grey color */
+    font-size: 1rem; /* Adjust size */
+    letter-spacing: 0.5px;
+}
+
+.feature-description {
+    font-size: 0.9rem; /* Slightly smaller description text */
+    line-height: 1.6;
+    color: #6c757d; /* Standard muted color */
+}
+
+/* --- On Sale Section Styling --- */
+.rainbow-graphic {
+    max-width: 180px; /* Adjust size as needed */
+    height: auto;
+}
+
+.sale-title {
+    color: #343a40; /* Dark grey */
+    font-size: 2.5rem; /* Large title size */
+    letter-spacing: 1px;
+}
+
+.sale-subtitle {
+    color: #888; /* Lighter grey for subtitle */
+    letter-spacing: 1px;
+    font-weight: 500; /* Slightly bolder than normal */
+}
+
+/* Responsive adjustments for titles if needed */
+@media (max-width: 767.98px) {
+    .sale-title {
+        font-size: 2rem;
+    }
+    .feature-title {
+        font-size: 0.95rem;
+    }
+    .feature-description {
+        font-size: 0.85rem;
+    }
+    /* Reduce top margin for sale section on smaller screens */
+    .mt-5.pt-5 {
+        margin-top: 3rem !important;
+        padding-top: 2rem !important;
+    }
+}
+/* section3 */
+/* --- Promo Banner Section Styling --- */
+.promo-banner-section {
+    min-height: 70vh; /* Adjust height as needed */
+    background: url('beach-banner.jpg') no-repeat center center; /* Replace with your image path */
+    background-size: cover;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    position: relative; /* Needed for overlay */
+    background-image: url(section\ 3\ image.jpg);
+}
+
+/* Optional Overlay - Adjust opacity and color as needed */
+.promo-banner-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05)); /* Very subtle overlay */
+    z-index: 1;
+}
+
+.banner-title {
+    font-size: 4.5rem; /* Large title */
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for readability */
+}
+
+.banner-subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.countdown-timer {
+    /* Optional background for timer if needed for contrast */
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    /* padding: 0.5rem 1rem; */
+    /* border-radius: 5px; */
+}
+
+.timer-icon {
+    color: #ffcc00; /* Yellowish color for the icon */
+    margin-right: 0.75rem !important; /* Override Bootstrap margin if needed */
+}
+/* If using an image instead of Font Awesome */
+.timer-icon-img {
+    width: 35px; /* Adjust size */
+    height: 35px;
+     margin-right: 0.75rem;
+}
+
+.timer-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: 500;
+    opacity: 0.95;
+}
+
+.btn-visit-sale {
+    background-color: #f37a36; /* Same orange as previous button */
+    border: none;
+    color: #fff;
+    padding: 0.9rem 2.5rem; /* Generous padding */
+    font-size: 1.1rem; /* Larger font size */
+    letter-spacing: 1px;
+    border-radius: 2px; /* Sharp corners */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-visit-sale:hover {
+    background-color: #e06825; /* Darker orange */
+    color: #fff;
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991.98px) {
+    .banner-title {
+        font-size: 3.5rem;
+    }
+    .banner-subtitle {
+        font-size: 1.1rem;
+    }
+    .promo-banner-section {
+        min-height: 60vh;
+    }
+     .btn-visit-sale {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .banner-title {
+        font-size: 2.8rem;
+    }
+    .banner-subtitle {
+        font-size: 1rem;
+    }
+     .timer-text {
+        font-size: 0.85rem;
+     }
+    .promo-banner-section {
+        min-height: 50vh;
+         padding-top: 4rem;
+         padding-bottom: 4rem;
+    }
+     .btn-visit-sale {
+        padding: 0.7rem 1.8rem;
+        font-size: 0.95rem;
+    }
+}
+@media (max-width: 575.98px) {
+     .banner-title {
+        font-size: 2.2rem;
+    }
+    .banner-subtitle {
+        font-size: 0.9rem;
+    }
+    .countdown-timer {
+        /* Stack icon and text vertically if needed */
+        /* flex-direction: column;
+        align-items: center; */
+    }
+     .timer-icon {
+         /* margin-right: 0 !important;
+         margin-bottom: 0.5rem; */
+     }
+     .timer-text {
+         /* text-align: center; */
+     }
+}
+/* section 4 */
+/* --- Promo Banner Section 2 (Desert) Styling --- */
+
+/* Use the base styles from .promo-banner-section and add specific background */
+.promo-banner-desert {
+    background: url('desert-banner.jpg') no-repeat center center; /* Replace with your desert image path */
+    background-size: cover;
+    background-image: url(desert.jpg);
+    /* You can adjust min-height if needed for this specific banner */
+    /* min-height: 75vh; */
+}
+
+/* Style for the smaller text above the main title */
+.banner-pretitle {
+    font-size: 1rem; /* Adjust size as needed */
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    opacity: 0.85;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: Adjust overlay for this banner if needed */
+.promo-banner-desert .overlay {
+     background: linear-gradient(to bottom, rgba(40, 20, 30, 0.1), rgba(0, 0, 0, 0.1)); /* Example: slightly different tint */
+}
+
+/* Optional: Adjust timer icon color if needed for better contrast */
+/* .promo-banner-desert .timer-icon {
+    color: #f0e68c; /* Example: Khaki color */
+/* } */
+
+/* Responsive adjustments specific to this banner's text if needed */
+@media (max-width: 767.98px) {
+    .banner-pretitle {
+        font-size: 0.9rem;
+    }
+    /* Other adjustments inherited from .promo-banner-section should apply */
+}
+
+@media (max-width: 575.98px) {
+     .banner-pretitle {
+        font-size: 0.8rem;
+    }
+}
+/* section5 */
+/* --- Promo Banner Section 3 (Secret Bay) Styling --- */
+
+/* Use the base styles from .promo-banner-section and add specific background */
+.promo-banner-bay {
+    background: url('secret-bay.jpg') no-repeat center center; /* Replace with your Secret Bay image path */
+    background-size: cover;
+    background-image: url(beauty.jpg);
+    /* Adjust min-height if needed */
+    /* min-height: 65vh; */
+}
+
+/* Optional: Adjust overlay for this banner if needed */
+.promo-banner-bay .overlay {
+     background: linear-gradient(to bottom, rgba(0, 50, 60, 0.1), rgba(0, 0, 0, 0.1)); /* Example: Teal/dark tint */
+}
+
+/* Adjust timer icon color if needed for better contrast */
+.promo-banner-bay .timer-icon {
+    color: #ffcc00; /* Keep yellow or adjust as needed */
+    /* Remove margin added previously if icon is now second */
+    margin-right: 0 !important;
+}
+.promo-banner-bay .timer-text {
+    /* Add margin to the right now text is first */
+     margin-right: 0.75rem;
+}
+
+/* Optional: Adjust title/subtitle style if different */
+.promo-banner-bay .banner-title {
+    /* Example: slightly thinner font if needed */
+    /* font-weight: 500; */
+}
+
+
+/* Responsive adjustments specific to this banner if needed */
+@media (max-width: 767.98px) {
+    /* Inherited styles should cover most cases */
+}
+/* section6 */
+/* --- On Sale Today Cards Section Styling --- */
+.on-sale-cards-section {
+    background-color: #fff; /* White background for this section */
+     /* Use custom padding values if defaults (py-5/py-md-6) aren't enough */
+    padding-bottom: 6rem; /* Example extra bottom padding */
+}
+
+/* Re-use sale title styles if needed */
+.on-sale-cards-section .sale-title {
+    /* Styles inherited from previous definition */
+}
+.on-sale-cards-section .sale-subtitle {
+     /* Styles inherited from previous definition */
+}
+.on-sale-cards-section .rainbow-graphic {
+    /* Styles inherited from previous definition */
+}
+
+
+/* Sale Card Styling */
+.sale-card {
+    /* No background or border needed as per image */
+    text-align: left; /* Align text to left */
+     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
+}
+.sale-card:hover {
+     transform: translateY(-5px); /* Slight lift on hover */
+     /* Optional: Add subtle shadow on hover */
+     /* box-shadow: 0 4px 15px rgba(0,0,0,0.05); */
+}
+
+
+.sale-card-img {
+    border-radius: 0; /* Sharp corners for images */
+    aspect-ratio: 4 / 3; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure image covers the area */
+}
+
+.sale-card-body {
+    padding: 1rem 0 0 0 !important; /* Top padding, no horizontal/bottom padding */
+}
+
+.sale-card-title {
+    font-size: 1.1rem; /* Adjust title size */
+    font-weight: 400; /* Normal weight */
+    color: #333; /* Dark text color */
+    margin-bottom: 0.25rem !important;
+}
+
+.sale-card-location {
+    font-size: 0.75rem; /* Smaller location text */
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem !important;
+}
+
+.star-rating {
+    color: #f37a36; /* Orange color for stars */
+    font-size: 0.8rem; /* Adjust star size */
+    margin-bottom: 0.5rem !important;
+}
+.star-rating i {
+    margin-right: 1px; /* Tiny space between stars */
+}
+
+
+.sale-card-price {
+    font-size: 1rem; /* Base size for price line */
+    font-weight: 400;
+}
+
+.sale-card-price .text-muted.small {
+    font-size: 0.8em; /* Make "from" and "/night" slightly smaller */
+    color: #888 !important; /* Ensure muted color overrides */
+    font-weight: 300;
+}
+
+.sale-card-price .price-amount {
+    color: #f37a36; /* Orange color for the price amount */
+    font-weight: 500; /* Make price slightly bolder */
+    font-size: 1.2em; /* Make price amount larger */
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .sale-card {
+        text-align: center; /* Center text on smaller screens if desired */
+    }
+    .sale-card-body {
+         padding: 0.75rem 0 0 0 !important;
+    }
+    .sale-card-title {
+        font-size: 1rem;
+    }
+    .sale-card-price .price-amount {
+        font-size: 1.1em;
+    }
+}
+/* section7 */
+/* --- Free Weekend / Destinations Section Styling --- */
+.free-weekend-section {
+    background-color: #f8f9fa; /* Light grey background */
+    /* Use custom padding values if needed */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.free-weekend-section .section-title {
+    font-size: 2.2rem; /* Adjust size */
+    color: #343a40; /* Dark grey */
+    letter-spacing: 1px;
+}
+
+.free-weekend-section .section-subtitle {
+    font-size: 0.85rem; /* Smaller subtitle */
+    letter-spacing: 0.8px;
+    color: #888 !important; /* Lighter muted color */
+}
+
+.destination-item {
+    /* Adjust max-width per item if using col-md-auto */
+    flex: 0 0 auto; /* Needed for col-md-auto */
+    width: auto; /* Needed for col-md-auto */
+    max-width: 100px; /* Example max-width */
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+     transition: transform 0.3s ease;
+}
+.destination-item:hover {
+     transform: scale(1.05); /* Slight zoom on hover */
+}
+
+
+.destination-icon {
+    width: 80px; /* Fixed width for the icon */
+    height: 80px; /* Fixed height */
+    border-radius: 50%; /* Make image circular */
+    object-fit: cover; /* Ensure image covers circle */
+    border: 3px solid #fff; /* White border like the image */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+    margin-bottom: 0.75rem !important; /* Space between icon and text */
+}
+
+.destination-name {
+    font-size: 0.85rem;
+    color: #5ab3a4; /* Teal color like the image */
+    font-weight: 500; /* Slightly bold */
+    margin-bottom: 0;
+}
+
+.btn-join-us {
+    background-color: #f37a36; /* Same orange color */
+    border: none;
+    color: #fff;
+    padding: 0.8rem 2.5rem; /* Adjust padding */
+    font-size: 1rem; /* Adjust font size */
+    letter-spacing: 1px;
+    border-radius: 4px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-join-us:hover {
+    background-color: #e06825; /* Darker orange */
+    color: #fff;
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Responsive Adjustments for Destination Icons */
+@media (max-width: 767.98px) {
+    .destination-item {
+        max-width: 90px; /* Slightly smaller on tablets */
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    .destination-icon {
+        width: 70px;
+        height: 70px;
+    }
+    .destination-name {
+        font-size: 0.8rem;
+    }
+    .free-weekend-section .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+     .destination-item {
+        max-width: 80px; /* Even smaller */
+         /* col-6 will apply, so ensure items/row is desired */
+     }
+    .destination-icon {
+        width: 60px;
+        height: 60px;
+        border-width: 2px;
+    }
+    .destination-name {
+        font-size: 0.75rem;
+    }
+     .free-weekend-section .section-title {
+        font-size: 1.6rem;
+    }
+     .free-weekend-section .section-subtitle {
+        font-size: 0.8rem;
+    }
+}

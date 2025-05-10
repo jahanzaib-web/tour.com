@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solaris Theme Section</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">SOLARIS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus .html">FEATURES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">GALLERY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="blog.html">BLOG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.html">SHOP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">CONTACT</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto d-flex flex-row align-items-center">
+                        <li class="nav-item me-3">
+                            <a class="nav-link nav-cart-icon" href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-login" href="#">LOG IN</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container mt-4 mb-5">
+        <div class="row">
+            <!-- Blog Post Column -->
+            <div class="col-lg-8" data-aos="fade-up">
+                <article class="blog-post-item">
+                    <img src="blog.jpg" alt="Las Terrazas Resort" class="img-fluid mb-3 post-image">
+                    <p class="post-categories">HOLIDAY, RESORT</p>
+                    <h1 class="post-title">LAS TERRAZAS RESORT</h1>
+                    <div class="post-meta mb-3">
+                        <span><i class="far fa-clock post-meta-icon"></i> Posted: <strong>January 14, 2015</strong></span> |
+                        <span>by: <a href="#" class="post-meta-author"><strong>Admin</strong></a></span> |
+                        <span><i class="far fa-comment post-meta-icon"></i> 3</span>
+                    </div>
+                    <p class="post-excerpt">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam ante nec magna pharetra feugiat. Phasellus et lorem ac mauris sagittis feugiat. Fusce euismod ac urna eu blandit. Sed eget blandit diam. Praesent quis est id ligula viverra...
+                    </p>
+                    <a href="#" class="read-more-link">
+                        <i class="fas fa-chevron-right"></i> READ MORE
+                    </a>
+                </article>
+            </div>
+
+            <!-- Sidebar Column -->
+            <div class="col-lg-4" data-aos="fade-left" data-aos-delay="100">
+                <aside class="sidebar">
+                    <!-- Search Widget -->
+                    <div class="widget search-widget mb-4">
+                        <form class="d-flex">
+                            <input class="form-control search-input" type="search" placeholder="SEARCH" aria-label="Search">
+                            <button class="btn btn-search" type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <hr class="sidebar-divider">
+
+                    <!-- Categories Widget -->
+                    <div class="widget categories-widget mb-4">
+                        <h5 class="widget-title">CATEGORIES</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Gallery Classic</a></li>
+                            <li><a href="#">Gallery Grid</a></li>
+                            <li><a href="#">Gallery Masonry</a></li>
+                            <li><a href="#">Grid Alternative</a></li>
+                        </ul>
+                    </div>
+                    <hr class="sidebar-divider">
+
+                    <!-- Recent Posts Widget -->
+                    <div class="widget recent-posts-widget mb-4">
+                        <h5 class="widget-title">RECENT POSTS</h5>
+                        <div class="recent-post-item d-flex mb-3" data-aos="fade-up" data-aos-delay="200">
+                            <img src="bernardus.jpg" alt="Bernardus Lodge" class="me-3 recent-post-thumb">
+                            <div>
+                                <a href="#" class="recent-post-title">Bernardus Lodge</a>
+                                <small class="d-block text-muted recent-post-meta">May 11, 2015 by Admin <i class="far fa-eye post-meta-icon"></i> 1022</small>
+                            </div>
+                        </div>
+                        <div class="recent-post-item d-flex mb-3" data-aos="fade-up" data-aos-delay="300">
+                            <img src="flip flops.jpg" alt="flip Hops And Sunglasses" class="me-3 recent-post-thumb">
+                            <div>
+                                <a href="#" class="recent-post-title">flip Hops And Sunglasses in a Bag</a>
+                                <small class="d-block text-muted recent-post-meta">May 11, 2015 by Admin <i class="far fa-eye post-meta-icon"></i> 448</small>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="sidebar-divider">
+
+                    <!-- Popular Widget (Tabs) -->
+                    <div class="widget popular-widget">
+                        <h5 class="widget-title">POPULAR</h5>
+                        <ul class="nav nav-tabs popular-tabs mb-3" id="popularTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="views-tab" data-bs-toggle="tab" data-bs-target="#views" type="button" role="tab" aria-controls="views" aria-selected="true">Views</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="comments-tab" data-bs-toggle="tab" data-bs-target="#comments" type="button" role="tab" aria-controls="comments" aria-selected="false">Comments</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="likes-tab" data-bs-toggle="tab" data-bs-target="#likes" type="button" role="tab" aria-controls="likes" aria-selected="false">Likes</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="popularTabsContent">
+                            <div class="tab-pane fade show active" id="views" role="tabpanel" aria-labelledby="views-tab" data-aos="fade-in">
+                                <p>Popular posts by views will be listed here. Add your dynamic content.</p>
+                            </div>
+                            <div class="tab-pane fade" id="comments" role="tabpanel" aria-labelledby="comments-tab" data-aos="fade-in">
+                                <p>Popular posts by comments will be listed here. Add your dynamic content.</p>
+                            </div>
+                            <div class="tab-pane fade" id="likes" role="tabpanel" aria-labelledby="likes-tab" data-aos="fade-in">
+                                <p>Popular posts by likes will be listed here. Add your dynamic content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Floating Left Icon -->
+    <div class="floating-left-icon" data-aos="fade-right">
+        <i class="fas fa-th"></i>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" title="Go to top" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- section2 -->
+     <!-- Main Content Section -->
+    <main class="container mt-4 mb-5">
+        <div class="row">
+            <!-- Blog Post Column -->
+            <div class="col-lg-8" data-aos="fade-up">
+                <article class="blog-post-item">
+                    <img src="blog2.jpg" alt="Villa Del Mar" class="img-fluid mb-3 post-image">
+                    <p class="post-categories">SEA, TRAVEL</p>
+                    <h1 class="post-title">VILLA DEL MAR</h1>
+                    <div class="post-meta mb-3">
+                        <span><i class="far fa-clock post-meta-icon"></i> Posted: <strong>December 30, 2014</strong></span> |
+                        <span>by: <a href="#" class="post-meta-author"><strong>Admin</strong></a></span> |
+                        <span><i class="far fa-comment post-meta-icon"></i> 1</span>
+                    </div>
+                    <p class="post-excerpt">
+                        Sed dapibus massa vitae ipsum aliquam sollicitudin. Aenean turpis leo, hendrerit quis bibendum sed, scelerisque nec sem. Praesent convallis lacinia pulvinar. Duis id sem urna. Ut et feugiat ligula. Vivamus tincidunt diam a lacus imperdiet tempus.
+                    </p>
+                    <a href="#" class="read-more-link">
+                        <i class="fas fa-chevron-right"></i> READ MORE
+                    </a>
+                </article>
+            </div>
+
+            <!-- Sidebar Column -->
+            <div class="col-lg-4" data-aos="fade-left" data-aos-delay="100">
+                <aside class="sidebar">
+                    <!-- Recent Posts Widget -->
+                    <div class="widget recent-posts-widget mb-4" data-aos="fade-up" data-aos-delay="150">
+                        <!-- Title "RECENT POSTS" is not explicitly in this new screenshot's sidebar, but keeping it for structure, or it can be removed if not needed. -->
+                        <!-- <h5 class="widget-title">RECENT POSTS</h5> -->
+                        <div class="recent-post-item d-flex mb-3">
+                            <img src="bernardus.jpg" alt="Barbados Superyacht" class="me-3 recent-post-thumb">
+                            <div>
+                                <a href="#" class="recent-post-title">Barbados - A Superyacht Destination!</a>
+                                <small class="d-block text-muted recent-post-meta">May 11, 2015 by Admin <i class="far fa-eye post-meta-icon"></i> 954</small>
+                            </div>
+                        </div>
+                        <div class="recent-post-item d-flex mb-3">
+                            <img src="travel in the middle east.jpg" alt="Middle East Travel" class="me-3 recent-post-thumb">
+                            <div>
+                                <a href="#" class="recent-post-title">Travel in the Middle East in 2015</a>
+                                <small class="d-block text-muted recent-post-meta">May 11, 2015 by Admin <i class="far fa-eye post-meta-icon"></i> 604</small>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="sidebar-divider">
+
+                    <!-- Tags Widget -->
+                    <div class="widget tags-widget mb-4" data-aos="fade-up" data-aos-delay="250">
+                        <h5 class="widget-title">TAGS</h5>
+                        <div class="tag-cloud">
+                            <a href="#" class="tag-link">CITY</a>
+                            <a href="#" class="tag-link">HOLIDAY</a>
+                            <a href="#" class="tag-link">RELAXATION</a>
+                            <a href="#" class="tag-link">RESORT</a>
+                            <a href="#" class="tag-link">SEA</a>
+                            <a href="#" class="tag-link">TOUR</a>
+                            <a href="#" class="tag-link">TRAVEL</a>
+                        </div>
+                    </div>
+                    <hr class="sidebar-divider">
+
+                    <!-- Calendar Widget -->
+                    <div class="widget calendar-widget mb-4" data-aos="fade-up" data-aos-delay="350">
+                        <h5 class="widget-title">CALENDAR</h5>
+                        <div class="calendar-container">
+                            <div class="calendar-header d-flex justify-content-between align-items-center">
+                                <button class="btn btn-sm calendar-nav"><i class="fas fa-chevron-left"></i></button>
+                                <span class="calendar-month-year">FEBRUARY 2016</span>
+                                <button class="btn btn-sm calendar-nav"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            <table class="table calendar-table text-center">
+                                <thead>
+                                    <tr>
+                                        <th>M</th>
+                                        <th>T</th>
+                                        <th>W</th>
+                                        <th>T</th>
+                                        <th>F</th>
+                                        <th>S</th>
+                                        <th>S</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="current-day">2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                        <td>13</td>
+                                        <td>14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>16</td>
+                                        <td>17</td>
+                                        <td>18</td>
+                                        <td>19</td>
+                                        <td>20</td>
+                                        <td>21</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22</td>
+                                        <td>23</td>
+                                        <td>24</td>
+                                        <td>25</td>
+                                        <td>26</td>
+                                        <td>27</td>
+                                        <td>28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>29</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+    <!-- section3 -->
+     
+    <!-- Main Content Section -->
+    <main class="container mt-4 mb-5">
+        <div class="row">
+            <!-- Blog Post Column -->
+            <div class="col-lg-8">
+                <!-- Audio Post Format -->
+                <article class="blog-post-item mb-5" data-aos="fade-up">
+                    <div class="audio-player-container mb-3">
+                        <div class="audio-player-overlay">
+                            <div class="audio-info">
+                                <h3 class="audio-title-text">Insert Audio Title Here</h3>
+                                <p class="audio-artist-text">by Lily Hunter</p>
+                            </div>
+                            <div class="audio-controls-visual">
+                                <i class="fas fa-play audio-icon-visual"></i>
+                                <span class="audio-time-visual">00:00</span>
+                                <div class="audio-progress-bar-visual">
+                                    <div class="audio-progress-filled-visual" style="width: 15%;"></div> 
+                                </div>
+                                <span class="audio-time-visual">04:37</span>
+                                <i class="fas fa-volume-up audio-icon-visual"></i>
+                                <div class="audio-volume-bar-visual">
+                                    <div class="audio-volume-filled-visual" style="width: 70%;"></div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="post-title">IMAGE POST FORMAT</h1>
+                    <div class="post-meta mb-3">
+                        <span><i class="far fa-clock post-meta-icon"></i> Posted: <strong>December 30, 2014</strong></span> |
+                        <span>by: <a href="#" class="post-meta-author"><strong>Admin</strong></a></span> |
+                        <span><i class="far fa-comment post-meta-icon"></i> 1</span>
+                    </div>
+                    <p class="post-excerpt">
+                        Nulla eu purus ac lorem pharetra ultrices. Sed commodo commodo justo, ac porttitor ligula scelerisque eget. Nulla hendrerit turpis sed lorem dictum dictum. Mauris at eleifend urna, egestas varius risus. Sed augue sem, blandit nec lectus mattis...
+                    </p>
+                    <a href="#" class="read-more-link">
+                        <i class="fas fa-chevron-right"></i> READ MORE
+                    </a>
+                </article>
+
+                <hr class="post-divider">
+
+                <!-- Post Without Image -->
+                <article class="blog-post-item" data-aos="fade-up" data-aos-delay="100">
+                    <h1 class="post-title">POST WITHOUT IMAGE</h1>
+                    <div class="post-meta mb-3">
+                         <span><i class="far fa-clock post-meta-icon"></i> Posted: <strong>November 15, 2014</strong></span> |
+                        <span>by: <a href="#" class="post-meta-author"><strong>Admin</strong></a></span> |
+                        <span><i class="far fa-comment post-meta-icon"></i> 5</span>
+                    </div>
+                    <p class="post-excerpt">
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    </p>
+                    <a href="#" class="read-more-link">
+                        <i class="fas fa-chevron-right"></i> READ MORE
+                    </a>
+                </article>
+
+            </div>
+
+            <!-- Sidebar Column -->
+            <div class="col-lg-4" data-aos="fade-left" data-aos-delay="150">
+                <aside class="sidebar">
+                    <!-- Flickr Photo Widget -->
+                    <div class="widget flickr-widget mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <h5 class="widget-title">FLICKR PHOTO</h5>
+                        
+                    </div>
+                    <hr class="sidebar-divider">
+
+                    <!-- Follow Us Widget -->
+                    <div class="widget follow-us-widget mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <h5 class="widget-title">FOLLOW US</h5>
+                        <p class="widget-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon dribbble"><i class="fab fa-dribbble"></i></a>
+                            <a href="#" class="social-icon pinterest"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon vimeo"><i class="fab fa-vimeo-v"></i></a>
+                            <a href="#" class="social-icon google-plus"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="social-icon flickr"><i class="fab fa-flickr"></i></a>
+                        </div>
+                    </div>
+                    <hr class="sidebar-divider">
+
+                    <!-- Archives Widget -->
+                    <div class="widget archives-widget mb-4" data-aos="fade-up" data-aos-delay="400">
+                        <h5 class="widget-title">ARCHIVES</h5>
+                        <ul class="list-unstyled archives-list">
+                            <li>May 2015 <span class="archive-count">(9)</span></li>
+                            <li> 2015 <span class="archive-count">(1)</span></li>
+                            <li>February 2015 <span class="archive-count">(1)</span></li>
+                            <li>January 2015 <span class="archive-count">(13)</span></li>
+                            <li>December 2014 <span class="archive-count">(9)</span></a></li>
+                            <li>November 2014 <span class="archive-count">(1)</span><li>
+                            <li>July 2014 <span class="archive-count">(1)</span><li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+    <!-- section4 -->
+    
+
+    <!-- Main Content Section -->
+    <main class="container mt-4 mb-5">
+        <div class="row">
+            <!-- Blog Post Column -->
+            <div class="col-lg-8">
+                <!-- Post Without Image (from previous example, now with visible Read More) -->
+                <article class="blog-post-item mb-5" data-aos="fade-up">
+                     <!-- Assume this post was here from previous step, it's the "POST WITHOUT IMAGE" -->
+                    <h1 class="post-title">POST WITH IMAGE</h1> <!-- Example: This was the second post in previous screenshot -->
+                    <div class="post-meta mb-3">
+                         <span><i class="far fa-clock post-meta-icon"></i> Posted: <strong>December 28, 2014</strong></span> |
+                        <span>by: <a href="#" class="post-meta-author"><strong>Admin</strong></a></span> |
+                        <span><i class="far fa-comment post-meta-icon"></i> 3</span>
+                    </div>
+                    <p class="post-excerpt">
+                        Duis auctor arcu ac mi bibendum posuere. Integer diam orci, faucibus ut mi sed, tincidunt vehicula erat. Sed ultricies tempor nunc, nec malesuada tortor vehicula ac. Curabitur imperdiet massa ac ex pretium, et mollis metus aliquet. Phasellus...
+                    </p>
+                    <a href="#" class="read-more-link">
+                        <i class="fas fa-chevron-right"></i> READ MORE
+                    </a>
+                </article>
+
+                <hr class="post-divider">
+
+                <!-- Image Post Format -->
+                <article class="blog-post-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="blogimg3.jpg" alt="Image Post" class="img-fluid mb-3 post-image">
+                    <h1 class="post-title">IMAGE POST FORMAT</h1>
+                    <div class="post-meta mb-3">
+                         <span><i class="far fa-clock post-meta-icon"></i> Posted: <strong>November 10, 2014</strong></span> |
+                        <span>by: <a href="#" class="post-meta-author"><strong>Admin</strong></a></span> |
+                        <span><i class="far fa-comment post-meta-icon"></i> 7</span>
+                    </div>
+                    <p class="post-excerpt">
+                        Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus.
+                    </p>
+                    <a href="#" class="read-more-link">
+                        <i class="fas fa-chevron-right"></i> READ MORE
+                    </a>
+                </article>
+            </div>
+
+            <!-- Sidebar Column -->
+            <div class="col-lg-4" data-aos="fade-left" data-aos-delay="150">
+                <aside class="sidebar">
+                    <!-- RSS Feed Widget -->
+                    <div class="widget rss-feed-widget mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <h5 class="widget-title rss-title">
+                            <i class="fas fa-rss rss-icon-orange"></i> RSS FEED
+                        </h5>
+                        <ul class="list-unstyled rss-feed-list">
+                            <li class="rss-feed-item">
+                                <a href="#" class="rss-item-title">Will Smith shuns Oscars in diversity protest, Ruffalo to attend</a>
+                                <small class="rss-item-date">January 22, 2016</small>
+                                <p class="rss-item-description">
+                                    NEW YORK (Reuters) - Will Smith on Thursday joined director Spike Lee and his wife Jada Pinkett-Smith in not attending the 2016 Oscar ceremony in February in protest over the absence of nominated actors of color, while nominee Mark Ruffalo said he will attend the show after confusion over his stance.
+                                </p>
+                            </li>
+                            <li class="rss-feed-item">
+                                <a href="#" class="rss-item-title">Judge dismisses Pennsylvania woman's lawsuit against Bill Cosby</a>
+                                <small class="rss-item-date">January 21, 2016</small>
+                                <p class="rss-item-description">
+                                    (Reuters) - A U.S. federal judge on Thursday dismissed a defamation lawsuit brought by a Pennsylvania woman against Bill Cosby, which contended the comedian smeared her character when he accused her of lying in claiming he had sexually assaulted her in the 1980s.
+                                </p>
+                            </li>
+                            <!-- Add more RSS items as needed -->
+                        </ul>
+                    </div>
+                    <!-- Add other widgets below if needed, or remove this comment -->
+                </aside>
+            </div>
+        </div>
+    </main>
+    <!-- section5 -->
+    
+
+    <!-- Main Content Section -->
+    <main class="container mt-4 mb-5">
+        <div class="row">
+            <!-- Blog Post Column -->
+            <div class="col-lg-8">
+                <hr class="post-divider"> <!-- Dashed line above quote post -->
+
+                <article class="quote-post-article text-center" data-aos="fade-up">
+                    <h1 class="post-title quote-page-title">QUOTE POST</h1>
+                    <div class="quote-block-wrapper mt-4">
+                        <div class="quote-icon-bubble">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="quote-image-container">
+                            <div class="quote-content-overlay">
+                                <blockquote class="quote-text">
+                                    I travel not to go anywhere, but to go.<br>
+                                    I travel for travel's sake.<br>
+                                    The great affair is to move.
+                                </blockquote>
+                                <cite class="quote-author">- JASON ANDERSON</cite>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <hr class="post-divider mt-5"> <!-- Dashed line below quote post -->
+            </div>
+
+            <!-- Sidebar Column (Empty for this view, but structure remains) -->
+            <div class="col-lg-4" data-aos="fade-left" data-aos-delay="150">
+                <aside class="sidebar">
+                    <!-- Sidebar is empty in this screenshot -->
+                </aside>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Bootstrap JS Bundle (Popper.js included) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

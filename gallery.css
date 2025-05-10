@@ -1,0 +1,406 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #555;
+    background-color: #fff;
+}
+
+/* Header Section */
+.header-section {
+    background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1740&q=80');
+    background-size: cover;
+    background-position: center center;
+    padding: 10px 0;
+    position: relative;
+}
+.header-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+.navbar {
+    position: relative;
+    z-index: 2;
+    background-color: transparent !important;
+}
+.navbar-brand {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #fff !important;
+    letter-spacing: 1px;
+}
+.navbar-nav .nav-link {
+    color: #f0f0f0 !important;
+    margin: 0 8px;
+    padding: 8px 12px !important;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    font-weight: 500;
+}
+.navbar-nav .nav-link:hover {
+    color: #fff !important;
+    border-color: rgba(255, 255, 255, 0.7);
+}
+.navbar-nav .nav-link.active {
+    color: #fff !important;
+    border: 2px solid #fff;
+    background-color: transparent;
+}
+.btn-login {
+    margin-left: 10px;
+    border-color: #fff;
+    color: #fff !important;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    font-weight: 500;
+    padding: 8px 18px;
+}
+.btn-login:hover {
+    background-color: #fff;
+    color: #333 !important;
+}
+.navbar-toggler { border-color: rgba(255,255,255,0.5); }
+.navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+
+/* Breadcrumb Section */
+.breadcrumb-section {
+    background-color: #fff;
+    border-top: 1px dashed #e0e0e0;
+    border-bottom: 1px dashed #e0e0e0;
+}
+.breadcrumb-wrapper a, .breadcrumb-wrapper .current-page, .breadcrumb-separator {
+    color: #999; text-decoration: none; font-size: 0.85em; text-transform: uppercase; font-weight: 500;
+}
+.breadcrumb-wrapper a:hover { color: #0d6efd; }
+.breadcrumb-wrapper .current-page { color: #666; }
+.breadcrumb-separator { font-size: 0.7em; vertical-align: middle; }
+
+/* About Us Title Section / Generic Page Title Section */
+.about-title-section {
+    background-color: #fff;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+.about-title-section .main-title {
+    color: #333; font-weight: 700; letter-spacing: 1px; font-size: 3.5em; margin-top: 15px;
+}
+.rainbow-line-container { display: flex; justify-content: center; }
+.rainbow-line {
+    width: 200px; height: 16px; margin-bottom: 15px; border-radius: 100px 100px 0 0; position: relative; overflow: hidden;
+}
+.rainbow-line::before, .rainbow-line::after, .rainbow-line > div, .rainbow-line > div > span {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; border-radius: 100px 100px 0 0;
+}
+.rainbow-line::before { height: 100%; background: #e0ebeb; }
+.rainbow-line::after { height: calc(100% - 4px); background: #fdf6e0; margin: 0 4px; }
+.rainbow-line > div { height: calc(100% - 8px); background: #fbe9e1; margin: 0 8px; }
+.rainbow-line > div > span { display: block; height: calc(100% - 4px); background: #f9e6e8; margin: 0 4px; }
+
+
+/* Gallery Polaroid Section */
+.gallery-polaroid-section {
+    background-image: url('https://i.imgur.com/x7zQ8dE.jpg'); /* White wood texture */
+    background-size: cover;
+    background-position: center center;
+    padding: 60px 0;
+    overflow: hidden;
+}
+#polaroidGallerySlider .carousel-item {
+    min-height: 75vh; /* Adjust as needed */
+    display: flex; /* Helps with alignment if needed */
+    align-items: center; /* Vertically center the scene if it's smaller than min-height */
+    justify-content: center; /* Horizontally center */
+}
+.gallery-slide-scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px; /* Max width for the scene of polaroids */
+    min-height: 65vh; /* Ensure scene has enough space */
+    margin: 0 auto; /* Center the scene */
+}
+.polaroid-item {
+    background-color: #fff;
+    padding: 15px;
+    padding-bottom: 55px; /* More space for caption */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    width: 250px;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+.polaroid-item:hover {
+    transform: scale(1.05) rotate(0deg) !important;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.35);
+    z-index: 10 !important;
+}
+.polaroid-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 180px; /* Adjusted image height */
+    object-fit: cover;
+    border: 1px solid #eee; /* Subtle border inside polaroid */
+}
+.polaroid-center { width: 280px !important; } /* Specific size for center item */
+.polaroid-center img { max-height: 220px !important; }
+
+.polaroid-caption {
+    position: absolute;
+    bottom: 12px;
+    left: 15px;
+    right: 15px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #666;
+    line-height: 1.4;
+    text-transform: uppercase;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.polaroid-caption-bar {
+    position: absolute;
+    bottom: 12px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 0.75em;
+    color: #666;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.polaroid-caption-bar .teal-icon {
+    background-color: #4FA8A8; color: white; padding: 5px 7px; margin-right: 8px;
+    font-size: 0.9em; border-radius: 2px; display: inline-flex; align-items: center; justify-content: center;
+}
+#polaroidGallerySlider .carousel-indicators { bottom: -45px; }
+#polaroidGallerySlider .carousel-indicators button {
+    background-color: rgba(255, 255, 255, 0.6); border: 1px solid rgba(0,0,0,0.3);
+    width: 12px; height: 12px; border-radius: 50%; margin: 0 6px;
+}
+#polaroidGallerySlider .carousel-indicators .active { background-color: #fff; border-color: rgba(0,0,0,0.5); }
+
+#polaroidGallerySlider .carousel-control-prev-icon,
+#polaroidGallerySlider .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.35); border-radius: 50%; width: 40px; height: 40px; background-size: 50%;
+}
+#polaroidGallerySlider .carousel-control-prev, #polaroidGallerySlider .carousel-control-next { opacity: 0.7; }
+#polaroidGallerySlider .carousel-control-prev:hover, #polaroidGallerySlider .carousel-control-next:hover { opacity: 1; }
+
+
+/* Why Choose Section */
+.why-choose-section { background-color: #f7f9fa; padding-top: 70px; padding-bottom: 70px; }
+.why-choose-section .section-title { color: #4FA8A8; font-weight: 300; font-size: 2.8em; margin-bottom: 50px !important; letter-spacing: 0.5px; }
+.why-choose-item .icon-container { color: #4FA8A8; flex-shrink: 0; width: 45px; text-align: center; }
+.why-choose-item .icon-container i { font-size: 2em; }
+.why-choose-item p { font-size: 1em; line-height: 1.6; color: #6c757d; }
+.video-placeholder-wrapper { background-color: #000; padding: 8px; border-radius: 3px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); position: relative; }
+.video-image { display: block; width: 100%; height: auto; border: 1px solid #222; }
+.staff-pick-badge { position: absolute; top: -15px; left: 10px; z-index: 10; }
+.staff-pick-badge img { width: 80px; height: auto; }
+.vimeo-logo { position: absolute; top: 18px; left: 25px; color: #b0b0b0; font-size: 0.75em; font-style: italic; font-weight: 500; z-index: 5; }
+.video-info { position: absolute; top: 18px; left: 110px; color: #fff; z-index: 5; }
+.video-info .video-title { font-size: 0.95em; font-weight: 600; margin-bottom: 2px; }
+.video-info .video-author { font-size: 0.75em; background-color: rgba(0,0,0,0.6); padding: 2px 6px; border-radius: 3px; display: inline-block; color: #e0e0e0; }
+
+/* Testimonial Bubbles Section */
+.testimonial-section { background-color: #fff; padding-top: 60px; padding-bottom: 80px; }
+.testimonial-item { position: relative; }
+.testimonial-bubble { background-color: #f7f7f7; padding: 25px; border-radius: 5px; margin-bottom: 40px; position: relative; box-shadow: 0 2px 5px rgba(0,0,0,0.05); color: #555; font-size: 0.95em; line-height: 1.6; }
+.testimonial-bubble::after { content: ''; position: absolute; bottom: -10px; left: 30px; width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 10px solid #f7f7f7; }
+.testimonial-author { margin-top: -25px; padding-left: 15px; }
+.testimonial-avatar { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-right: 15px; border: 3px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.testimonial-author-info .author-name { color: #4FA8A8; font-size: 1.1em; font-weight: 600; margin-bottom: 2px; }
+.testimonial-author-info .author-date { color: #888; font-size: 0.8em; margin-bottom: 0; }
+
+/* Destinations Section */
+.destinations-section { background-color: #f7f9fa; padding-top: 70px; padding-bottom: 70px; }
+.destinations-title { color: #333; font-size: 2.8em; font-weight: 700; margin-bottom: 15px; letter-spacing: 0.5px; }
+.destinations-subtitle { color: #777; font-size: 0.95em; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 0.5px; }
+.destination-link { text-decoration: none; display: block; transition: transform 0.2s ease-out; }
+.destination-link:hover { transform: translateY(-5px); }
+.destination-image-wrapper { width: 100px; height: 100px; border-radius: 50%; overflow: hidden; margin: 0 auto 10px auto; border: 4px solid #fff; background-color: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.08); transition: box-shadow 0.3s ease; }
+.destination-link:hover .destination-image-wrapper { box-shadow: 0 6px 15px rgba(0,0,0,0.12); }
+.destination-image { width: 100%; height: 100%; object-fit: cover; }
+.destination-name { color: #4FA8A8; font-size: 0.9em; font-weight: 500; margin-bottom: 0; }
+
+/* Testimonial Slider Section */
+.testimonial-slider-section { background-color: #fff; padding-top: 70px; padding-bottom: 70px; }
+.section-main-title { color: #333; font-size: 2.8em; font-weight: 700; margin-bottom: 10px; letter-spacing: 0.5px; text-transform: uppercase; }
+.section-subtitle { color: #888; font-size: 0.9em; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500; }
+.testimonial-slide-content { min-height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.testimonial-illustration { max-width: 150px; height: auto; margin-bottom: 25px !important; }
+.testimonial-slide-title { color: #333; font-size: 1.3em; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; }
+.testimonial-slide-text { color: #6c757d; font-size: 1em; line-height: 1.7; max-width: 600px; }
+#testimonialSlider .carousel-indicators button { background-color: #cccccc; width: 10px; height: 10px; border-radius: 50%; margin: 0 5px; border: none; }
+#testimonialSlider .carousel-indicators .active { background-color: #4FA8A8; }
+#testimonialSlider .carousel-control-prev-icon, #testimonialSlider .carousel-control-next-icon { background-color: rgba(0,0,0,0.3); border-radius: 50%; width: 40px; height: 40px; background-size: 50% 50%; }
+#testimonialSlider .carousel-control-prev, #testimonialSlider .carousel-control-next { width: 5%; }
+
+/* Footer Widgets Section */
+.footer-widgets-section { background-color: #f7f9fa; padding-top: 60px; padding-bottom: 60px; border-top: 1px solid #e0e0e0; }
+.widget-title { color: #333; font-size: 1.1em; font-weight: 700; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 0.5px; }
+.widget-list-item { margin-bottom: 20px; }
+.widget-list-item:last-child { margin-bottom: 0; }
+.widget-thumbnail { width: 60px; height: 60px; object-fit: cover; border-radius: 3px; }
+.widget-item-content { flex-grow: 1; }
+.widget-item-title { color: #4FA8A8; font-size: 0.95em; font-weight: 600; text-decoration: none; display: block; margin-bottom: 3px; }
+.widget-item-title:hover { color: #3a8c8c; }
+.widget-item-meta { color: #888; font-size: 0.8em; margin-bottom: 0; }
+.widget-item-meta a { color: #777; text-decoration: none; }
+.widget-item-meta a:hover { color: #4FA8A8; }
+.widget-item-meta .fa-eye { color: #aaa; }
+.review-rating { margin-bottom: 3px; font-size: 0.9em; }
+.review-rating .fa-heart { color: #e74c3c; }
+.review-rating .far.fa-heart { color: #ddd; }
+.review-rating .rating-score { color: #e74c3c; font-size: 0.85em; font-weight: 600; margin-left: 5px; }
+.popular-icon-wrapper { width: 60px; flex-shrink: 0; display: flex; }
+.popular-icon { font-size: 1.8em; color: #e74c3c; }
+
+/* Main Footer Section */
+.main-footer { background-color: #000000; color: #a0a0a0; padding-top: 40px; padding-bottom: 40px; }
+.footer-logo { max-height: 60px; width: auto; }
+.footer-brand-name { color: #ffffff; font-size: 1.8em; font-weight: 600; letter-spacing: 1px; margin-bottom: 20px !important; }
+.social-icons { padding-left: 0; }
+.social-icons .list-inline-item { margin-right: 8px; margin-left: 8px; }
+.social-icons a { display: inline-block; width: 36px; height: 36px; line-height: 36px; border-radius: 50%; text-align: center; font-size: 1.1em; transition: transform 0.2s ease-out, background-color 0.2s ease-out; }
+.social-icon-twitter    { background-color: #00ACEE; color: #fff; }
+.social-icon-dribbble   { background-color: #ea4c89; color: #fff; }
+.social-icon-pinterest  { background-color: #c8232c; color: #fff; }
+.social-icon-facebook   { background-color: #3b5998; color: #fff; }
+.social-icon-vimeo      { background-color: #1AB7EA; color: #fff; }
+.social-icon-google-plus{ background-color: #dd4b39; color: #fff; }
+.social-icon-flickr     { background-color: #0063DC; color: #fff; }
+.social-icons a:hover { transform: translateY(-3px); opacity: 0.85; }
+.copyright-text { font-size: 0.8em; color: #777777; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 30px !important; }
+
+/* Floating Settings Icon */
+.floating-settings-icon { position: fixed; left: 0; top: 40%; transform: translateY(-50%); background-color: #4FA8A8; padding: 10px 8px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; cursor: pointer; z-index: 1000; box-shadow: 1px 1px 4px rgba(0,0,0,0.15); display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.floating-settings-icon .dot { width: 5px; height: 5px; background-color: white; border-radius: 1px; }
+
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) { /* Laptops and tablets */
+    .navbar-nav { background-color: rgba(0,0,0,0.8); padding: 10px; border-radius: 5px; margin-top: 10px; }
+    .navbar-nav .nav-link { margin: 5px 0; padding: 10px !important; }
+    .btn-login { margin-left: 0; margin-top: 10px; display: block; width: 100%; }
+    .about-title-section .main-title { font-size: 2.8em; }
+    .why-choose-section .section-title { font-size: 2.3em; }
+    .video-info { left: 100px; }
+    .widget-title { margin-top: 20px; }
+    .footer-widgets-section .col-lg-4:first-child .widget-title { margin-top: 0; }
+
+    /* Gallery Responsive */
+    .polaroid-item { width: 200px; padding-bottom: 45px; }
+    .polaroid-item img { max-height: 150px; }
+    .polaroid-center { width: 240px !important; }
+    .polaroid-center img { max-height: 180px !important; }
+    #polaroidGallerySlider .carousel-item { min-height: 65vh; }
+    .gallery-slide-scene { min-height: 60vh; }
+}
+
+@media (max-width: 767.98px) { /* Mobile devices */
+    .about-title-section .main-title { font-size: 2.2em; }
+    .rainbow-line { width: 160px; height: 12px; }
+    .rainbow-line::after { height: calc(100% - 3px); margin: 0 3px; }
+    .rainbow-line > div { height: calc(100% - 6px); margin: 0 6px; }
+    .rainbow-line > div > span { height: calc(100% - 3px); margin: 0 3px; }
+
+    .why-choose-section .section-title { font-size: 1.9em; }
+    .why-choose-left { text-align: center; }
+    .why-choose-item { flex-direction: column; align-items: center !important; }
+    .why-choose-item .icon-container { margin-right: 0; margin-bottom: 10px; }
+    .floating-settings-icon { display: none; }
+    .video-info { font-size: 0.9em; left: 90px; top: 15px; }
+    .staff-pick-badge img { width: 65px; }
+    .vimeo-logo { top: 15px; left: 20px;}
+
+    .testimonial-bubble { padding: 20px; margin-bottom: 35px; }
+    .testimonial-bubble::after { left: 20px; }
+    .testimonial-avatar { width: 60px; height: 60px; }
+    .testimonial-author-info .author-name { font-size: 1em; }
+    .testimonial-author-info .author-date { font-size: 0.75em; }
+
+    .destinations-title { font-size: 2.2em; }
+    .destinations-subtitle { font-size: 0.85em; margin-bottom: 30px; }
+    .destination-image-wrapper { width: 80px; height: 80px; }
+    .destination-name { font-size: 0.8em; }
+    .destination-items-row { margin-top: 20px !important; }
+
+    .section-main-title { font-size: 2.2em; }
+    .section-subtitle { font-size: 0.8em; }
+    .testimonial-illustration { max-width: 120px; }
+    .testimonial-slide-title { font-size: 1.1em; }
+    .testimonial-slide-text { font-size: 0.9em; padding: 0 15px; }
+    .testimonial-slide-content { min-height: 280px; }
+    #testimonialSlider .carousel-control-prev, #testimonialSlider .carousel-control-next { width: 8%; }
+
+    .widget-thumbnail { width: 50px; height: 50px; }
+    .widget-item-title { font-size: 0.9em; }
+    .widget-item-meta { font-size: 0.75em; }
+    .popular-icon-wrapper { width: 50px; }
+    .popular-icon { font-size: 1.6em; }
+
+    .footer-logo { max-height: 50px; }
+    .footer-brand-name { font-size: 1.5em; }
+    .social-icons a { width: 32px; height: 32px; line-height: 32px; font-size: 1em; }
+    .social-icons .list-inline-item { margin-right: 5px; margin-left: 5px; }
+    .copyright-text { font-size: 0.7em; }
+
+    /* Gallery Responsive - Mobile */
+    #polaroidGallerySlider .carousel-item {
+        min-height: 90vh; /* Increased height to prevent too much overlap */
+    }
+     .gallery-slide-scene {
+        min-height: 85vh;
+        /* On mobile, it might be better to stack polaroids or use fewer per slide */
+        /* The absolute positioning will be tricky, adjust 'top' and 'left' percentages carefully */
+    }
+    .polaroid-item {
+        width: 160px; /* Smaller polaroids */
+        padding: 10px;
+        padding-bottom: 40px;
+    }
+    .polaroid-item img {
+        max-height: 110px;
+    }
+    .polaroid-caption, .polaroid-caption-bar {
+        font-size: 0.75em;
+    }
+     .polaroid-center {
+        width: 180px !important; /* Smaller center item */
+    }
+    .polaroid-center img {
+        max-height: 130px !important;
+    }
+    /* Example: Adjust specific polaroid positions for mobile on slide 1 */
+    .carousel-item.active .polaroid-item:nth-child(1) { top: 2%; left: 2%; transform: rotate(-10deg); }
+    .carousel-item.active .polaroid-item:nth-child(2) { top: 8%; left: 45%; transform: rotate(8deg) translateX(-50%); } /* More centered */
+    .carousel-item.active .polaroid-item:nth-child(3) { top: 35%; left: 50%; transform: translateX(-50%) rotate(-1deg); } /* Center item pushed down */
+    .carousel-item.active .polaroid-item:nth-child(4) { top: 5%; right: 2%; transform: rotate(12deg); }
+    .carousel-item.active .polaroid-item:nth-child(5) { display: none; } /* Hide one if too cluttered */
+    .carousel-item.active .polaroid-item:nth-child(6) { top: 65%; left: 10%; transform: rotate(6deg); }
+    .carousel-item.active .polaroid-item:nth-child(7) { top: 70%; right: 5%; transform: rotate(-7deg); }
+
+    #polaroidGallerySlider .carousel-indicators { bottom: 10px; /* Bring indicators up if content is long */ }
+}
+
+@media (max-width: 575.98px) { /* Extra Small devices */
+    .destination-image-wrapper { width: 70px; height: 70px; }
+    .polaroid-item {
+        width: clamp(120px, 40vw, 150px); /* Dynamic width */
+    }
+    .polaroid-item img {
+        max-height: clamp(80px, 25vw, 100px);
+    }
+    .polaroid-center {
+        width: clamp(150px, 45vw, 170px) !important;
+    }
+    .polaroid-center img {
+        max-height: clamp(100px, 30vw, 120px) !important;
+    }
+}

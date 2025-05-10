@@ -1,0 +1,505 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #555;
+    background-color: #fff;
+}
+
+/* Header Styles */
+.site-header {
+    background: url('https://images.unsplash.com/photo-1444080748397-f442aa95c3e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center; /* Example mountain background - REPLACE with your image */
+    background-size: cover;
+    padding: 25px 0;
+    color: white;
+}
+
+.site-header .logo {
+    font-size: 2.8em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 15px;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.main-nav a.active, .main-nav a.login-btn {
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.main-nav a.cart-icon i {
+    font-size: 1.2em;
+}
+
+.main-nav a:hover {
+    opacity: 0.8;
+    border-color: rgba(255,255,255,0.5);
+}
+
+/* Breadcrumb Styles */
+.breadcrumb-section {
+    padding: 15px 0;
+    border-bottom: 1px dashed #e0e0e0;
+}
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 0;
+}
+.breadcrumb-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+.breadcrumb-item.active {
+    color: #333;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #6c757d;
+}
+
+/* Contact Title Section Styles */
+.contact-title-section {
+    padding: 60px 0;
+    animation: fadeIn 1s ease-out;
+}
+
+.rainbow-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+    height: auto;
+}
+
+.arc-color {
+    height: 7px;
+    border-radius: 120px 120px 0 0;
+    margin-top: -3px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeInUpArc 0.6s ease-out forwards;
+}
+.arc-color:first-child {
+    margin-top: 0;
+}
+.arc-c1 { background-color: #7ACCF2; width: 240px; animation-delay: 0.1s; } /* Light Blue */
+.arc-c2 { background-color: #F9D423; width: 225px; animation-delay: 0.2s; } /* Yellow */
+.arc-c3 { background-color: #FC91AD; width: 210px; animation-delay: 0.3s; } /* Pink */
+.arc-c4 { background-color: #FD7F36; width: 195px; animation-delay: 0.4s; } /* Orange */
+
+.contact-title-section h1 {
+    font-size: 3.8em;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Get In Touch Section Styles */
+.get-in-touch-section {
+    padding: 50px 0;
+}
+.get-in-touch-section h2 {
+    font-size: 2.8em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    animation: fadeInUpContent 0.8s ease-out 0.2s;
+    animation-fill-mode: both;
+}
+.get-in-touch-section .address {
+    font-size: 1.1em;
+    color: #777;
+    margin-bottom: 25px;
+    animation: fadeInUpContent 0.8s ease-out 0.4s;
+    animation-fill-mode: both;
+}
+.get-in-touch-section p:not(.address) {
+    font-size: 1em;
+    line-height: 1.7;
+    color: #555;
+    animation: fadeInUpContent 0.8s ease-out 0.6s;
+    animation-fill-mode: both;
+}
+
+/* Floating Dots Icon Styles */
+.floating-dots-icon {
+    position: fixed;
+    left: 15px;
+    top: 200px;
+    background-color: #4DB6AC; /* Turquoise */
+    padding: 10px;
+    border-radius: 3px;
+    z-index: 1000;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out 1s forwards;
+}
+.dot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 5px);
+    grid-template-rows: repeat(3, 5px);
+    gap: 3px;
+}
+.dot-grid .dot {
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUpArc {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUpContent {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .main-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .main-nav a {
+        margin: 5px;
+    }
+    .site-header .container {
+        flex-direction: column;
+    }
+    .site-header .logo {
+        margin-bottom: 15px;
+    }
+    .contact-title-section h1 {
+        font-size: 2.8em;
+    }
+    .get-in-touch-section h2 {
+        font-size: 2.2em;
+    }
+    .floating-dots-icon {
+        top: 150px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .contact-title-section {
+        padding: 40px 0;
+    }
+    .contact-title-section h1 {
+        font-size: 2.2em;
+    }
+    .arc-c1 { width: 180px; }
+    .arc-c2 { width: 165px; }
+    .arc-c3 { width: 150px; }
+    .arc-c4 { width: 135px; }
+
+    .get-in-touch-section {
+        padding: 30px 0;
+    }
+    .get-in-touch-section h2 {
+        font-size: 1.8em;
+    }
+    .get-in-touch-section .address {
+        font-size: 1em;
+    }
+    .get-in-touch-section p:not(.address) {
+        font-size: 0.95em;
+    }
+    .floating-dots-icon {
+        display: none;
+    }
+     .main-nav a {
+        margin-left: 10px;
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+}
+ @media (max-width: 575.98px) {
+    .site-header .logo {
+        font-size: 2em;
+    }
+}
+/* section2 */
+body {
+    font-family: Arial, sans-serif; /* A common sans-serif font */
+}
+
+.contact-info-section {
+    background-image: url('https://images.unsplash.com/photo-1502920514358-906c5d4ba203?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* Replace with your city background image */
+    background-size: cover;
+    background-position: center center;
+    padding: 80px 0;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+/* Reddish overlay */
+.contact-info-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(78, 12, 78); /* Adjust red color and opacity as needed */
+    z-index: 1;
+}
+
+.contact-info-section .container {
+    position: relative; /* To ensure content is above the overlay */
+    z-index: 2;
+}
+
+.contact-item {
+    margin-bottom: 40px; /* Spacing for mobile view when items stack */
+}
+
+.icon-wrapper {
+    width: 100px; /* Size of the circle */
+    height: 100px;
+    border: 3px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto; /* Center the circle */
+    font-size: 36px; /* Icon size */
+    animation: floatAnimation 3s ease-in-out infinite;
+}
+
+/* Staggered animation for a nicer effect */
+.contact-item:nth-child(1) .icon-wrapper {
+    animation-delay: 0s;
+}
+.contact-item:nth-child(2) .icon-wrapper {
+    animation-delay: 0.3s;
+}
+.contact-item:nth-child(3) .icon-wrapper {
+    animation-delay: 0.6s;
+}
+
+.contact-label {
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.contact-detail {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Floating Animation */
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px); /* How high it floats */
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .contact-info-section {
+        padding: 50px 0;
+    }
+    .icon-wrapper {
+        width: 80px;
+        height: 80px;
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    .contact-item {
+        margin-bottom: 30px; /* Adjust spacing for stacked items */
+    }
+    .contact-item:last-child {
+        margin-bottom: 0;
+    }
+    .contact-label {
+        font-size: 0.8em;
+    }
+    .contact-detail {
+        font-size: 1em;
+    }}
+/* section3 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.message-form-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #000000 0%, #6d156d 100%); /* Dark Grey/Black to Dark Purple gradient */
+    color: #f8f9fa; /* Default light text color for the section */
+}
+
+.section-title {
+    font-size: 2.4em; /* As per image */
+    font-weight: 600; /* As per image (boldish) */
+    margin-bottom: 10px;
+    color: #ffffff; /* White title for dark background */
+    text-transform: uppercase; /* As per image */
+    letter-spacing: 1px;
+}
+
+.section-subtitle {
+    font-size: 0.9em;
+    color: #adb5bd; /* Light grey subtitle for dark background */
+    margin-bottom: 40px;
+    text-transform: uppercase; /* As per image */
+}
+
+.message-form-section .form-control {
+    background-color: #ffffff; /* White background for inputs (contrast with dark section) */
+    border: 1px solid #d1d1d1; /* Light grey border, similar to image */
+    border-radius: 4px; /* Slight rounding as in image */
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    color: #333333; /* Dark text for user input */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    height: auto; /* Ensure proper height */
+}
+
+.message-form-section .form-control::placeholder {
+    color: #6c757d; /* Standard placeholder color */
+    opacity: 1;
+}
+
+/* Hover and Focus effect for inputs */
+.message-form-section .form-control:hover {
+    border-color: #b0b0b0; /* Slightly darker border on hover */
+}
+
+.message-form-section .form-control:focus {
+    border-color: #F4792E; /* Orange border on focus (matches button) */
+    box-shadow: 0 0 0 0.2rem rgba(244, 121, 46, 0.2); /* Light orange glow */
+    background-color: #ffffff; /* Keep background white on focus */
+    color: #333333; /* Keep text dark on focus */
+}
+
+.message-form-section .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.btn-submit-custom {
+    background-color: #F4792E; /* Orange color from image */
+    border: none; /* No border for the button */
+    color: white;
+    padding: 12px 30px;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase; /* As per image */
+    border-radius: 2px; /* Slightly rounded, almost sharp corners like image */
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease-in-out, transform 0.15s ease-out;
+}
+
+/* Hover animation for button */
+.btn-submit-custom:hover {
+    background-color: #6d156d; /* Darker orange on hover */
+    color: white;
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Floating Dots Icon Styles */
+.floating-dots-icon-fixed {
+    position: fixed;
+    left: 20px;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    background-color: #4DB6AC; /* Turquoise from image */
+    padding: 10px;
+    border-radius: 3px;
+    z-index: 1000;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.dot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 5px);
+    grid-template-rows: repeat(3, 5px);
+    gap: 3px;
+}
+
+.dot-grid .dot {
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .section-title {
+        font-size: 1.8em;
+    }
+    .section-subtitle {
+        font-size: 0.8em;
+        margin-bottom: 30px;
+    }
+    .message-form-section {
+        padding: 60px 15px; /* Add horizontal padding for smaller screens */
+    }
+    .btn-submit-custom {
+        width: 100%; /* Full width button on small screens */
+        padding: 12px 20px;
+    }
+    .floating-dots-icon-fixed {
+        left: 10px; /* Closer to edge on small screens */
+        /* display: none; /* Optionally hide if it gets in the way */
+    }
+}
+
+@media (max-width: 575.98px) {
+    .section-title {
+        font-size: 1.6em;
+    }
+    .message-form-section .form-control {
+        padding: 0.7rem 0.9rem;
+        font-size: 0.95rem;
+    }
+}
